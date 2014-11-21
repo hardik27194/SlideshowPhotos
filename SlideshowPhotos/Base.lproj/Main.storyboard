@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JHB-Mm-5fm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOb-hG-50v">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Play" id="0fg-wV-akP">
+                                        <connections>
+                                            <action selector="playSlideshow:" destination="vXZ-lx-hvc" id="GVZ-QO-t63"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="q56-P0-tJb"/>
+                                    <barButtonItem title="Stop" id="wDm-JN-I2X">
+                                        <connections>
+                                            <action selector="stopSlideshow:" destination="vXZ-lx-hvc" id="Of3-Wo-8eW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eOb-hG-50v" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="595-ie-KcJ"/>
+                            <constraint firstItem="JHB-Mm-5fm" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="9YK-D1-WlC"/>
+                            <constraint firstAttribute="trailing" secondItem="eOb-hG-50v" secondAttribute="trailing" id="CG5-LV-lvK"/>
+                            <constraint firstAttribute="trailing" secondItem="JHB-Mm-5fm" secondAttribute="trailing" id="CGz-Cp-xSz"/>
+                            <constraint firstItem="JHB-Mm-5fm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Fcj-n5-ioO"/>
+                            <constraint firstItem="eOb-hG-50v" firstAttribute="top" secondItem="JHB-Mm-5fm" secondAttribute="bottom" id="NKK-1V-TyP"/>
+                            <constraint firstItem="eOb-hG-50v" firstAttribute="top" secondItem="JHB-Mm-5fm" secondAttribute="bottom" id="sMi-CJ-tX8"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="eOb-hG-50v" secondAttribute="bottom" id="z5r-Am-hvP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="barBtnPlay" destination="0fg-wV-akP" id="W7J-ZR-Dav"/>
+                        <outlet property="barBtnStop" destination="wDm-JN-I2X" id="Avl-sa-rLb"/>
+                        <outlet property="imgViewPhoto" destination="JHB-Mm-5fm" id="d4A-t0-oUj"/>
+                        <outlet property="toolbarBottom" destination="eOb-hG-50v" id="dW2-J2-t6Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
